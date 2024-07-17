@@ -7,6 +7,7 @@ const myObj = {
     cell: '03000000'
 }
 let myArray = [1, 2, 3, 4, 5, 6, 7, 8]
+
 // console.log(`Number is: ${typeof num} and My Name is: ${typeof myName} and it is: ${typeof checker} my array is ${typeof myArray}`);
 
 let newVar = 1234
