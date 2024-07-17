@@ -58,12 +58,37 @@ else{
 }
 
 if(num1 <= num2){
-    console.log(`${num1} is smaller than ${num2}`);
+    // console.log(`${num1} is smaller than ${num2}`);
     num1 += 2;
-    console.log(num1);
+    // console.log(num1);
 }
 
 if(num1 >= num2){
-    console.log(`${num1} is greater than ${num2}`);
+    // console.log(`${num1} is greater than ${num2}`);
     
 }
+
+
+
+//covering ' == '  , ' === ' , &&, || and ! operators
+num1 = 2
+num2 = 4
+
+if(num1 == num2 && typeof num1 == typeof num2){
+    // console.log(`Both the variables are of same type and have same value of: ${num1}`);
+}
+else if(num1 != num2 || num1 <= num2){
+    // console.log(`Variables are of same type but not same value`);
+}
+
+else{
+    // console.log(`Variables are niether of same type nor same value`);
+}
+
+
+
+//ternary operator
+
+// num1 < num2 
+// ? console.log(`variable one is smaller than variable two`) 
+// : console.log(`variable one is greater than variable two`);
