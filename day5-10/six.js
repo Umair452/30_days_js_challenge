@@ -79,15 +79,27 @@ filterArray.filter((e, index) => {
 // console.log(`Index of elment is: ${index} and the element is:${e}`);    
 });
 
-console.log(filterArray.reduce((acc, num) => {
+// console.log(filterArray.reduce((acc, num) => {
     
-    return acc +=  num
-}));
+//     return acc +=  num
+// }));
 
 //use reduce and filter methods for discount and other things
 
-console.log(`Your new bill after discount is ${
-    customerCart.reduce((acc, item) => {
-        return acc += item
-    })
-}`);
+// console.log(`Your new bill after discount is ${
+//     customerCart.reduce((acc, item) => {
+//         return acc += item
+//     })
+// }`);
+
+
+filterArray.forEach(element => {
+
+    
+    // console.log(`Element  of array is: ${element}`);
+    
+})
+
+let twoDarray = [[0,1,2,3,4,5,6],[7,8,9,10,11,12,13]]
+console.log(twoDarray[1][1]);
+console.table(twoDarray);
