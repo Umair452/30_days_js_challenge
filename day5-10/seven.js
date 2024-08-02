@@ -18,8 +18,8 @@ let bookOne = {
 
 
 const library = {
-    'name': 'UOG Library',
-    'books': [
+    name: 'UOG Library',
+    books: [
         {
             'title': 'Islamiat',
             'author': 'Nasir Publisher'
@@ -46,5 +46,17 @@ const library = {
         }
     ]
 }
+
+
+
+
+console.log(`Name of the library is: ${library.name} and it has following books`);
+
+for (let index = 0; index < library.books.length; index++) {
+    console.log(library.books[index].title);
+    
+    
+}
+
 
 
