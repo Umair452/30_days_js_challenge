@@ -3,12 +3,12 @@ let bookOne = {
     'author': 'Lumber One',
     'publishYear': 1947,
     bookDetails () {
-            console.log(`Book title is: ${this.name} and its author is: ${this.author}`);
+            // console.log(`Book title is: ${this.name} and its author is: ${this.author}`);
     },
 
     updatingValue (input){
         this.publishYear = input;
-        console.log(`I updated the year to ${this.publishYear}`);
+        // console.log(`I updated the year to ${this.publishYear}`);
     }
 
 }
@@ -50,13 +50,34 @@ const library = {
 
 
 
-console.log(`Name of the library is: ${library.name} and it has following books`);
+// console.log(`Name of the library is: ${library.name} and it has following books`);
 
 for (let index = 0; index < library.books.length; index++) {
-    console.log(library.books[index].title);
+    // console.log(library.books[index].title);
     
     
 }
 
+for (const book of library.books){
 
+
+    for (let key in book){
+        // console.log(`${key}: ${book[key]}`);
+        
+        
+    }
+
+}
+
+for (const book of library.books) {
+    const keys = Object.keys(book);
+    const values = Object.values(book);
+    for (let i = 0; i < keys.length; i++) {
+        console.log(`Key: ${keys[i]} Value: ${values[i]}`);
+                
+    }
+        
+    }
+
+    
 
