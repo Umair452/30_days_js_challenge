@@ -6,8 +6,57 @@
     <title>Document</title>
     <script src="script.js"></script>
 </head>
-<body>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <p id="paragraph">I shall get changed by the following button</p>
     <button id="btn" onmouseover="borderChanger()" onclick="paragraphChanger()">Change Text</button>
+    <div>
+        <img style="opacity: 1;" ondblclick="visibiltyChanger()"  id="image" src="../src/imageOne.jpg" alt="sunflower">
+    </div>
+
+    <input onkeydown="pressedKey()" type="text" name="" id="input">
+
+    <form id="form">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Phone Number Field -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+        <br><br>
+
+        <!-- Message Field -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <!-- Submit Button -->
+        
+        <button onclick="formHandler()">Submit</button>
+    </form>
+
+<h1>Select a value</h1>
+
+<select name="heroes" id="dropdown">
+    <option value="Superaman">Superaman</option>
+    <option value="Spider mon">Spider mon</option>
+    <option value="Battmannn">Battmannn</option>
+</select>
+
+<h3 id="heroName"></h3>
+
+<ul class="list">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+    <li>List item 4</li>
+</ul>
+<button onclick="elementCreator()">Add new li</button>
 </body>
 </html>
