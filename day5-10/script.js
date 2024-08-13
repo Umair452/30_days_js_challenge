@@ -145,48 +145,48 @@
 // })
 
 
-let promiseFour = new Promise(function(resolve, reject){
-    setTimeout(()=>{
-        let error = false
-        if(! error){
-            resolve({userName: "Umair"})
-        } else {
-            reject('ERROR!! SOMETHING WENT WRONG')
-        }
-    }, 2000)
-}).then((user)=>{
-    // console.log(user);
-    return user.userName;
-}).then((name)=>{
-    console.log(name);
+// let promiseFour = new Promise(function(resolve, reject){
+//     setTimeout(()=>{
+//         let error = false
+//         if(! error){
+//             resolve({userName: "Umair"})
+//         } else {
+//             reject('ERROR!! SOMETHING WENT WRONG')
+//         }
+//     }, 2000)
+// }).then((user)=>{
+//     // console.log(user);
+//     return user.userName;
+// }).then((name)=>{
+//     console.log(name);
     
-}).catch((error)=>{
-    console.log(error);
-}).finally(()=>{
-    console.log(`Promise run successfully`);
-})
+// }).catch((error)=>{
+//     console.log(error);
+// }).finally(()=>{
+//     console.log(`Promise run successfully`);
+// })
 
 
-let promiseFive = new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-        let error = false
-        if(! error){
-            resolve({userName: "Javascript is loaded"})
-        } else {
-            reject('LOADING ERROR!! SOMETHING WENT WRONG')
-        }
-    }, 1000)
-})
+// let promiseFive = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         let error = false
+//         if(! error){
+//             resolve({userName: "Javascript is loaded"})
+//         } else {
+//             reject('LOADING ERROR!! SOMETHING WENT WRONG')
+//         }
+//     }, 1000)
+// })
 
 
 // Promise.all([promiseFour, promiseFive]).then((values)=>{
 //     console.log(values);
     
 // })
-Promise.race([promiseFour, promiseFive]).then((values)=>{
-    console.log(values);
+// Promise.race([promiseFour, promiseFive]).then((values)=>{
+//     console.log(values);
     
-})
+// })
 
 
 
@@ -224,3 +224,63 @@ Promise.race([promiseFour, promiseFive]).then((values)=>{
 //     console.log(error);
     
 // })
+
+
+
+// function numberDivider () {
+//     let numerator = 4;
+//     let denominator = 0;
+//     return new Promise ((resolve,  reject)=>{
+//         setTimeout(()=>{
+//                 try {
+
+//                     if (denominator === 0) {
+//                         throw new Error("Division by zero is not allowed");
+
+                        
+//                     }
+
+//                     let result = numerator / denominator;
+//                     console.log(`No error occured`);
+//                     resolve(result)
+//                 } catch (error) {
+//                     reject(error)
+//                 }
+//         }, 2000)
+//     })
+// }
+
+// numberDivider()
+function divideNumbers() {
+    return new Promise((resolve, reject) => {
+      let numerator = 2;
+      let denominator = 2;
+  
+      setTimeout(() => {
+        try {
+          if (denominator === 0) {
+            throw new Error("Division by zero is not allowed");
+          }
+  
+          let result = numerator / denominator;
+          resolve(result); // This line will only run if no error is thrown
+          console.log(`No error occurred, result is: ${result}`);
+        } catch (error) {
+          reject(error); // This line will run if an error is thrown
+        }
+      }, 2000);
+    });
+  }
+  
+  // Using the function
+  divideNumbers()
+    .then(result => {
+      console.log(`Result: ${result}`);
+    })
+    .catch(error => {
+      console.log(`Error occurred: ${error.message}`);
+    }).finally(()=>{
+        console.log(`The promise has been executed`);
+        
+    })
+  
