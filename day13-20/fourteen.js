@@ -3,6 +3,21 @@ class Person {
     age = 24
     studentId = 1234
     studentName = 'Huzaifa'
+    fName = 'Muhammad'
+    lName = 'Umair'
+
+    get intro (){
+        console.log(`First name: ${this.fName}, Last name: ${this.lName}`);
+        
+    }
+
+    set first(firstName){
+        this.fName = firstName
+    }
+
+    set last(lastName){
+        this.lName = lastName
+    }
 
     static studentCount = 0
 
@@ -52,9 +67,17 @@ let pObj = new Person;
 
 // Person.greetings()
 
-let secondStudent = new Student
-secondStudent.studentCreation(1090, 'Hasan')
-secondStudent.student();
-let thirdStudent = new Student
-thirdStudent.studentCreation(1122, 'Talha')
-thirdStudent.student()
+// let secondStudent = new Student
+// secondStudent.studentCreation(1090, 'Hasan')
+// secondStudent.student();
+// let thirdStudent = new Student
+// thirdStudent.studentCreation(1122, 'Talha')
+// thirdStudent.student()
+
+console.log(pObj.intro);
+
+pObj.first = 'Talha'
+pObj.last = 'Butt'
+
+console.log(pObj.intro);
+
