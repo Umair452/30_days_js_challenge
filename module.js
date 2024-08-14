@@ -15,12 +15,21 @@ let myUser = {
 }
 
 
+function urlRequest(){
+
+    axios.get('https://api.github.com/users/Umair452').then((response)=>{
+        console.log(response);
+        
+    });
+}
+
 
 
 
 let module = {
     sum,
-    myUser
+    myUser,
+    urlRequest
 }
 
 
