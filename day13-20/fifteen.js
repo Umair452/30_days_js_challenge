@@ -1,7 +1,7 @@
 function outerFunction(){
 
         function innerFunction () {
-            console.log(`I have accessed the User: ${userName}`);
+            // console.log(`I have accessed the User: ${userName}`);
             
         }
 
@@ -69,6 +69,52 @@ idGenerator();
 idGenerator();
 idGenerator();
 
-console.log(array);
-console.log(`Number of array elements: ${array.length}`);
-console.log(`Function called: ${count} times`);
+// console.log(array);
+// console.log(`Number of array elements: ${array.length}`);
+// console.log(`Function called: ${count} times`);
+
+
+function captureUser(name){
+    return function(){
+        console.log(`Welcome my friend: ${name}`);
+        
+    }
+}
+
+const umairUser = captureUser('Umair')
+const talhaUser = captureUser('Talha')
+
+// umairUser()
+// talhaUser()
+
+function createFunction(index){
+
+    return function (){
+        console.log(`Function index is:${index}`);
+        
+    }
+
+}
+
+const functionArray = []
+for (let index = 0; index < 5; index++) {
+    
+functionArray.push(createFunction(index))
+    
+}
+
+// functionArray[0]();
+// functionArray[1]();
+
+
+function outer(outerVar){
+    return function inner(innerVar){
+        console.log(`I am outer function variable:${outerVar}`);
+        console.log(`I am inner function variable:${innerVar}`);
+        
+        
+    }
+}
+
+const newFun = outer(2)
+newFun(3)
