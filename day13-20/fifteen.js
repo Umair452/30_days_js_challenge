@@ -187,13 +187,43 @@ function itemHandler() {
   const itemsModule = itemHandler();
   
   // Use the module's methods
-  itemsModule.add("Pepsi 100ML", 150, "Pepsi is a brand bro");
-  itemsModule.add("Coke 100ML", 250, "Coca Cola");
-  itemsModule.view(0);
-  itemsModule.view(1);
-  itemsModule.update(0, "Cup cake", 70, "Cup cake added in place of Pepsi");
-  itemsModule.view(0);
-  itemsModule.remove(0);
-  itemsModule.view(0);
-  itemsModule.view(1); // Should show invalid index message
+  // itemsModule.add("Pepsi 100ML", 150, "Pepsi is a brand bro");
+  // itemsModule.add("Coke 100ML", 250, "Coca Cola");
+  // itemsModule.view(0);
+  // itemsModule.view(1);
+  // itemsModule.update(0, "Cup cake", 70, "Cup cake added in place of Pepsi");
+  // itemsModule.view(0);
+  // itemsModule.remove(0);
+  // itemsModule.view(0);
+  // itemsModule.view(1); // Should show invalid index message
+  
+
+  function outerTwo(num1){
+    
+    function inner(){
+      // console.log(`The sum of the two variables are: ${result}`);
+      console.log(`Fictorial of num: ${num1} is ${result}`);
+      
+      
+      
+    }
+    
+    let result = num1;
+    // result = num1 + num2;
+
+    //fictorial
+    for (let index = num1 - 1; index > 0 ; index--) {
+      result = result * index;
+      
+    }
+
+    return inner()
+    
+  }
+
+  // const result = outerTwo(2, 3)
+
+  // outerTwo(5)
+  
+  
   
